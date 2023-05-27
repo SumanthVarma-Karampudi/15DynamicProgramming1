@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int fibo_3(int n) {
+int fibo_3(int n) {                                                 //Dynamic Programming(Iterative approach - Bottom Up)
 	int *ans = new int[n+1];
 
 	ans[0] = 0;
@@ -14,7 +14,7 @@ int fibo_3(int n) {
 	return ans[n];
 }
 
-int fibo(int n) {
+int fibo(int n) {                                                   //Brute Force( Recursive )
 	if(n <= 1) {
 		return n;
 	}
@@ -23,7 +23,7 @@ int fibo(int n) {
 	return a + b;
 }
 
-int fibo_helper(int n, int *ans) {
+int fibo_helper(int n, int *ans) {                                   //Memoization(Recursive - Top Down)
 	if(n <= 1) {
 		return n;
 	}
